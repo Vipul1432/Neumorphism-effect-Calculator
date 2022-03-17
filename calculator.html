@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      margin: auto;
+    }
+
+    #answer {
+      width: 300px;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+
+    input {
+      font-size: 30px;
+      width: 65px;
+      height: 55px;
+      margin: 5px;
+      border: 0px solid;
+      border-radius: 8px;
+      background: #EFEFEF;
+      outline: none;
+    }
+
+    .calc {
+      background: #EFEFEF;
+      padding: 10px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    input {
+      box-shadow: 5px 5px 5px grey, -5px -5px 5px white;
+    }
+
+    input:active {
+      box-shadow: inset 5px 5px 5px grey, inset -5px -5px 5px white;
+    }
+
+    #answer {
+      box-shadow: inset 5px 5px 5px grey, inset -5px -5px 5px white;
+    }
+
+    .calc {
+      box-shadow: 5px 5px 5px grey, -5px -5px 5px grey;
+    }
+  </style>
+
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+  <title>Calculator</title>
+
+</head>
+
+<body>
+
+
+  <div calss="container" align="center">
+
+    <h1>CALCULATOR</h1>
+    <form name="forms">
+      <div class="calc">
+        <input type="text" id="answer" name="screen">
+        <br>
+
+        <input type="button" value=" √ " onclick="forms.screen.value = Math.sqrt(forms.screen.value),vib()">
+        <input type="button" value=" x² " onclick="forms.screen.value *= forms.screen.value,vib()">
+        <input type="button" value=" C " onclick="forms.screen.value = forms.screen.value.slice(0,-1),vib()">
+        <input type="button" value=" AC " onclick="forms.screen.value ='',vib()">
+        <br>
+
+        <input type="button" value=" 7 " onclick="forms.screen.value +='7',vib()">
+        <input type="button" value=" 8 " onclick="forms.screen.value +='8',vib()">
+        <input type="button" value=" 9 " onclick="forms.screen.value +='9',vib()">
+        <input type="button" value=" + " onclick="forms.screen.value +='+',vib()">
+        <br>
+
+        <input type="button" value=" 4 " onclick="forms.screen.value +='4',vib()">
+        <input type="button" value=" 5 " onclick="forms.screen.value +='5',vib()">
+        <input type="button" value=" 6 " onclick="forms.screen.value +='6',vib()">
+        <input type="button" value=" - " onclick="forms.screen.value +='-',vib()">
+        <br>
+
+        <input type="button" value=" 1 " onclick="forms.screen.value +='1',vib()">
+        <input type="button" value=" 2 " onclick="forms.screen.value +='2',vib()">
+        <input type="button" value=" 3 " onclick="forms.screen.value +='3',vib()">
+        <input type="button" value=" * " onclick="forms.screen.value +='*',vib()">
+        <br>
+
+
+        <input type="button" value=" 0 " onclick="forms.screen.value +='0',vib()">
+        <input type="button" value=" . " onclick="forms.screen.value +='.',vib()">
+        <input type="button" value=" = " onclick="forms.screen.value = eval(forms.screen.value),vib()">
+        <input type="button" value=" / " onclick="forms.screen.value +='/',vib()">
+        <br>
+
+
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>
